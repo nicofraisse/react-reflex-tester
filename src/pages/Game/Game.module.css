@@ -1,0 +1,10 @@
+.Game {
+  width: 100%;
+  padding: 32px;
+  box-sizing: border-box;
+}
+
+.Game h1 {
+  font-size: 32px;
+  margin-bottom: 40px;
+}

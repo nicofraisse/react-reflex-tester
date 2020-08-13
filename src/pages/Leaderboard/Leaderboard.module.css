@@ -1,0 +1,8 @@
+.Leaderboard {
+  height: 400px;
+}
+
+.Leaderboard > div {
+  overflow: scroll;
+  height: 360px;
+}

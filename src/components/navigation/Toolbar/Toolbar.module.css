@@ -1,0 +1,41 @@
+.Toolbar {
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+}
+
+.Toolbar a {
+  font-size: 18px;
+  width: 50%;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  padding: 12px;
+  box-sizing: border-box;
+  color: #555;
+  font-weight: bold;
+  border-bottom: 3px solid #febf63;
+  border-top: 3px solid #febf63;
+  background-color: #febf63;
+}
+
+.Toolbar a:first-child {
+  border-radius: 10px 0 0 0;
+}
+
+
+.Toolbar a:last-child {
+  border-radius: 0 10px 0 0;
+}
+
+.Toolbar a:hover,
+.Toolbar a:active,
+.Toolbar a.active {
+  box-sizing: border-box;
+  border-bottom: 3px solid #333;
+  color: #333;
+  background-color: rgba(254, 201, 108, 1.00);
+  border-top: 3px solid rgba(254, 201, 108, 1.00);
+}
+
+
+
