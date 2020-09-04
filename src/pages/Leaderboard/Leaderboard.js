@@ -26,14 +26,24 @@ class Leaderboard extends Component {
       .catch(err => console.log(err));
   }
 
+  roundNumber = (num, decimal) => Math.round(num * decimal) / decimal;
+
+  avg = (scores) => {
+    const avgScore = scores.stats.reduce((a, b) => a + b) / scores.stats.length;
+    return this.roundNumber(avgScore, 1)
+  }
+
+
   render() {
-    const allScores = this.state.scores.map((score) => {
-      return <LeaderboardScore scores={score} />
+    const allScores = this.state.scores
+    .sort((s1, s2) => this.avg(s1) - this.avg(s2))
+    .map((scores, index) => {
+      return <LeaderboardScore scores={scores} index={index} avgScore={this.avg(scores)}/>
     });
     return (
       <div className={classes.Leaderboard}>
-        <h1>Leaderboard</h1>
-        <div>
+        <h1 className="mt-3">Leaderboard</h1>
+        <div className={classes.ScoreList}>
           { allScores }
         </div>
       </div>

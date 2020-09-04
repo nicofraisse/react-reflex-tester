@@ -2,9 +2,19 @@
   width: 100%;
   padding: 32px;
   box-sizing: border-box;
+  height: 490px;
 }
 
 .Game h1 {
   font-size: 32px;
   margin-bottom: 40px;
+}
+
+.TimeRemaining {
+  background-color: rgba(255, 255, 255, 0.5);
+  display: inline-block;
+  padding: 6px 8px;
+  border-radius: 3px;
+  margin: 32px 0 0 0;
+  font-size: 22px;
 }

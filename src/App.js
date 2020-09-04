@@ -4,7 +4,7 @@ import Game from './pages/Game/Game';
 import Leaderboard from './pages/Leaderboard/Leaderboard';
 import Layout from './hoc/Layout/Layout';
 import Aux from './hoc/Aux';
-import { Route } from 'react-router-dom';
+import { Route, Redirect } from 'react-router-dom';
 
 function App() {
   return (
@@ -12,6 +12,7 @@ function App() {
       <Layout>
         <Route path="/game" exact component={Game} />
         <Route path="/leaderboard" component={Leaderboard} />
+        <Redirect to="/game" />
       </Layout>
     </div>
   );

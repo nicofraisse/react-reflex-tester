@@ -5,7 +5,7 @@ const square = (props) => (
   <div
   className={classes.Square}
   style={{backgroundColor: props.color}}
-  onClick={props.click}/>
+  onMouseDown={props.click}/>
 );
 
 export default square;

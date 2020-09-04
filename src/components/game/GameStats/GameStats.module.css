@@ -1,6 +1,29 @@
 .GameStats {
-  border: 1px solid #999;
   margin-left: 32px;
-  padding: 16px;
   flex-grow: 1;
+  height: 100%;
+  position: relative;
+}
+
+.GameStatsList {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  grid-gap: 12px;
+  grid-auto-flow: column;
+  grid-auto-columns: max-content;
+}
+
+.GameStatsTitle {
+  text-align: left;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.GameStat {
+  color: white;
+  background-color: rgb(30, 40, 50);
+  font-size: 16px;
+  padding: 4px;
+  width: 100%;
 }
