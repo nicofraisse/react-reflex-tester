@@ -6,3 +6,20 @@
   overflow: scroll;
   height: 420px;
 }
+
+.Leaderboard h1 {
+  margin: 0 !important;
+  padding-top: 16px;
+}
+
+@media (max-width: 740px) {
+  .Leaderboard {
+    height: 390px;
+  }
+  .Leaderboard > div {
+    height: 316px;
+  }
+  .Leaderboard h1 {
+    font-size: 36px;
+  }
+}

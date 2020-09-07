@@ -1,13 +1,19 @@
 .Layout {
-  width: 100%;
+  width: 90%;
   background-color: #ede682;
   border-radius: 10px;
   box-shadow: 12px 24px 12px rgba(0, 0, 0, 0.4);
 }
 
 
-@media (min-width: 720px) {
+@media (min-width: 740px) {
   .Layout {
     width: 720px;
+  }
+}
+
+@media (max-width: 500px) {
+  .Layout {
+    width: 92%;
   }
 }

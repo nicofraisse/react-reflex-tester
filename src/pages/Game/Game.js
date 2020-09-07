@@ -17,7 +17,8 @@ class Game extends Component {
     gameEnded: false,
     gameStarted: false,
     playerName: null,
-    successfulGame: true
+    successfulGame: true,
+    noClick: false
   }
 
   makeColorWhite = () => {
@@ -89,9 +90,16 @@ class Game extends Component {
     }, this.randomNumber(min, max))
   }
 
+  handleIllegalClick() {
+    this.setState({noClick: true})
+    setTimeout(() => {
+      this.setState({noClick: false})
+    }, 3000)
+  }
+
   squareClickHandler = (time) => {
     if (this.state.gameEnded) return;
-    if (this.state.squareColor === RED) {
+    if (this.state.squareColor === RED && !this.state.noClick) {
       this.setState({
         attemptData: this.state.attemptData.concat(time - this.state.becameRedTimestamp)
       });
@@ -99,7 +107,8 @@ class Game extends Component {
       this.randomlyBecomeRed(1000, 8000);
     }
     else {
-      alert('please take it easy')
+      alert("The square wasn't red when you clicked 😡")
+      this.handleIllegalClick()
     }
   }
 
@@ -118,8 +127,8 @@ class Game extends Component {
       }
       gameReveal = (
         <div className={classes.Game}>
-          <h1>Click the square when it becomes red.</h1>
-          <div style={{display: 'flex'}}>
+          <h1>Click the square when it becomes <span style={{color: 'rgb(245, 110, 104)', fontWeight: 'bold'}}>red</span>.</h1>
+          <div className={classes.CubeStatsWrapper}>
             <Loader>
               <Square click={(e) => this.squareClickHandler((new Date().getTime()).toString().slice(7))} color={this.state.squareColor} />
             </Loader>
@@ -127,12 +136,14 @@ class Game extends Component {
               <GameStats gameData={this.state.attemptData} />
             </div>
           </div>
+          <div className={classes.TimeRemainingContainer}>
           {this.state.gameStarted ?
             this.state.timeRemaining < 1 && this.state.successfulGame ? <p className={classes.TimeRemaining}>Great job! Your score has been saved to the <strong>leaderboard</strong> ✅</p>
               : !this.state.successfulGame ? <p className={classes.TimeRemaining}>You have less than 5 records, your data could not be saved 😢</p>
               : <p className={classes.TimeRemaining}>{this.state.timeRemaining} seconds remaining</p>
               : <p className={classes.TimeRemaining}>Get ready...</p>}
-
+          </div>
+          <div className={classes.NoClick} style={{display: this.state.noClick ? 'block' : 'none'}}></div>
         </div>
       );
     }

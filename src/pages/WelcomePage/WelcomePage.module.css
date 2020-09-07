@@ -18,3 +18,68 @@
   box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.1);
   padding: 24px 0;
 }
+
+.ForestGreen {
+  border: 1px solid rgba(133, 188, 122, 1.00);
+  background-color: rgba(133, 188, 122, 1.00);
+}
+
+.ForestGreen:hover {
+  border: 1px solid #5fba4c;
+  background-color: #5fba4c;
+}
+
+@media (max-width: 740px) {
+  .WelcomePage {
+    height: 390px;
+    padding: 32px;
+  }
+  .WelcomePage p {
+    font-size: 16px;
+  }
+  .WelcomePage h1 {
+    font-size: 28px;
+    margin-top: 12px;
+  }
+  .WelcomePage > div {
+    width: 90%;
+    max-width: 340px;
+    margin: 40px auto 0 auto;
+
+  }
+  .WelcomePage h5 {
+    font-size: 18px;
+  }
+  .WelcomePage form input:first-child {
+    width: 40vw;
+    max-width: 200px;
+  }
+}
+
+
+@media (max-width: 500px) {
+  .WelcomePage {
+    height: 390px;
+    padding: 16px;
+  }
+  .WelcomePage p {
+    font-size: 15px;
+  }
+  .WelcomePage h1 {
+    font-size: 24px;
+    margin-top: 32px;
+  }
+  .WelcomePage > div {
+    width: 90%;
+    max-width: 340px;
+    margin: 40px auto 0 auto;
+
+  }
+  .WelcomePage h5 {
+    font-size: 16px;
+  }
+  .WelcomePage form input:first-child {
+    width: 40vw;
+    max-width: 200px;
+  }
+}

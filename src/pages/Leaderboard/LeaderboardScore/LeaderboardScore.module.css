@@ -3,8 +3,36 @@
   padding: 12px 16px;
   margin: 16px auto;
   display: flex;
-  width: 50%;
-  border-radius: 4px;
+  width: 70%;
+  border-radius: 2px;
   align-items: center;
   justify-content: space-between;
+  box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.05);
 }
+
+.datetime {
+  display: block;
+}
+
+.datenotime {
+  display: none;
+}
+
+
+@media (max-width: 680px) {
+  .LeaderboardScore {
+    width: 90%;
+    padding: 10px 8px;
+  }
+}
+
+@media (max-width: 540px) {
+  .datetime {
+    display: none;
+  }
+
+  .datenotime {
+    display: block;
+  }
+}
+

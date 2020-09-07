@@ -7,12 +7,14 @@ const gameStats = (props) => {
     // const broUslow = ['🐢', '👵🏼', '😡', '😢']
     const broUslow = ['🐢']
     // const ladUfast = ['✈️', '🚀', '🏃‍♀️', '💯']
-    const ladUfast = ['💯']
-    const palUnormal = ['🆗']
-    if (data > 420) {
+    const ladUfast = ['✈️']
+    const palUnormal = ['👌']
+    if (data > 430) {
       addMessage = broUslow[Math.floor(Math.random() * broUslow.length)];
-    } else if (data < 280) {
+    } else if (data < 290) {
       addMessage = ladUfast[Math.floor(Math.random() * ladUfast.length)];
+    } else {
+      addMessage = palUnormal[Math.floor(Math.random() * palUnormal.length)];
     }
     return <div className={classes.GameStat}>{data} ms {addMessage}</div>
   })
@@ -20,7 +22,7 @@ const gameStats = (props) => {
   let averageStr = null
   if (props.gameData.length > 0) {
     const averageTime = props.gameData.reduce((a, b) => a + b) / gameDataList.length
-    averageStr = `(Average: ${Math.round(averageTime)} ms)`
+    averageStr = `(average: ${Math.round(averageTime)} ms)`
   }
 
   return (

@@ -20,9 +20,9 @@ class WelcomePage extends Component {
           <label htmlFor="nameInput"><h5>Enter your nickname to get started:</h5></label>
           <form>
             <div className="form-inline text-left">
-              <input type="text" id="nameInput" onChange={this.updateName} placeholder="Your name" className="form-control mr-3" autocomplete="off"/>
+              <input type="text" id="nameInput" onChange={this.updateName} placeholder="Your name" className="form-control width-mobile mr-3" autocomplete="off"/>
 
-              <input type="submit" value="Play!" onClick={(event) => this.props.submit(event, this.state.name)} className="btn btn-success" style={{border: '1px solid rgba(133, 188, 122, 1.00)', backgroundColor: 'rgba(133, 188, 122, 1.00)'}}/>
+              <input type="submit" value="Play!" onClick={(event) => this.props.submit(event, this.state.name)} className={["btn btn-success", classes.ForestGreen].join(' ')}/>
             </div>
           </form>
         </div>

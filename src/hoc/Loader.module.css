@@ -7,3 +7,10 @@
   font-size: 50px;
   border: 1px dashed rgb(180, 180, 180);
 }
+
+@media (max-width: 720px) {
+  .Loader {
+    width: 30vw;
+    height: 30vw;
+  }
+}

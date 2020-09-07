@@ -18,12 +18,39 @@
   text-align: left;
   font-size: 18px;
   margin-bottom: 20px;
+  display: block;
 }
 
 .GameStat {
   color: white;
-  background-color: rgb(30, 40, 50);
+  background-color: rgb(40, 55, 70);
   font-size: 16px;
   padding: 4px;
   width: 100%;
+  border-radius: 2px;
+}
+
+@media (max-width: 740px) {
+  .GameStats {
+    margin-left: 16px;
+  }
+  .GameStatsTitle {
+    display: none;
+  }
+  .GameStatsList {
+    grid-gap: 6px;
+    max-height: 60vw;
+    overflow-y: scroll;
+    grid-auto-flow: row;
+  }
+  .GameStat {
+    font-size: 14px;
+    padding: 2px;
+  }
+}
+
+@media (max-width: 580px) {
+  .GameStatsList {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
