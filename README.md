@@ -29,3 +29,4 @@ This project mage as a personal challenge to practice React, axios, and asynchro
 
 - [ ] Form validations
 - [ ] Better leaderboard view
+- [ ] Ask for email
